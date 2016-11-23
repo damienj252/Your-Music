@@ -1,16 +1,19 @@
-import sqlite3
-from flask import g
+#Originally adapted from:
+# https://github.com/data-representation/example-project/blob/master/webapp.py
 
-DATABASE = 'http://127.0.0.1:5984/_utils/#/database/music/_all_docs'
+import flask as fl
+import itertools as it
 
-def get_db():
-    db = getattr(g, '_database', None)
-    if db is None:
-        db = g._database = sqlite3.connect(DATABASE)
-    return db
+app = fl.Flask(__name__)
 
-@app.teardown_appcontext
-def close_connection(exception):
-    db = getattr(g, '_database', None)
-    if db is not None:
-        db.close()
+@app.route("/")
+def root():
+    return app.send_static_file('index.html')
+
+@app.route("/perms", methods=["GET", "POST"])
+def perms():
+	perms = [''.join(p) for p in it.permutations(fl.request.values["userinput"])]
+	return '\n'.join(perms)
+
+if __name__ == "__main__":
+    app.run()
