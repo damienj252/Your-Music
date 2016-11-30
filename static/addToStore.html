@@ -12,7 +12,6 @@
     <!--Bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
     
-    
 <head>
   <title>Add Music</title>
   <meta charset="utf-8">
@@ -27,65 +26,73 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">Add to Store</a>
+      <a class="navbar-brand" href="index.html">Music Store</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="index.html">Home</a></li>
-      <li class="active"><a href="addToStore.html">Add</a></li>
-      <li><a href="myStore.html">My Store</a></li>
+        <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search Your songs here">
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+    </form>
     </ul>
   </div>
+    
 </nav>
+    
+    
   
 <div class="container">
+    <h3>What is My Music Store?</h3>
+        <p>This is a single web application that allows a user store their favorite songs and artist so they never forget a song.</p>
+
     <h3>Add your favorite artist and songs to this store</h3>
-
-        
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript">
-
-    <jQuery(function($) {
-      var submitArtist = null;
-      var $form = $('#test');
-      var $submitArtists = $form.find('input[type=submit]');
-
-      $form.submit(function(event)
-    {
-          if (null === submitArtist) 
-          {
-              // If no actor is explicitly clicked, the browser will
-              // automatically choose the first in source-order
-              // so we do the same here
-              submitArtist = $submitArtist[0];
-          }//if null is equals to submitArtist, submitArtist is equal to 0
-
-          console.log(submitArtist.name);
-          // alert(submitActor.name);
-
-          return false;
-      });
-
-      $submitActors.click(function(event) {
-          submitArtist = this;
-      });
-  });
-    </script>
     
     <!-- This is a form that allows the user enter information into the database using a form-->
-      <form id="save">
+      <form>
           <div class="form-group">
                 <label for="name">Add to Library</label>
           <input type="text" class="form-control" id="artist" placeholder="Enter Name of the Artist">
     <br />
           <input type="text" class="form-control" id="song" placeholder="Enter Name of the Song">
     <br />
-          <button type="button" onclick="alert('Added to Store')" id="submit" class="btn-primary">Add to Store</button> 
+          <button type="button" id="submit" class="btn btn-primary">Add to Store</button> 
           </div>
      </form>
-    </div>
     
+		<br />
+		<form>
+		  <div class="form-group">
+			<label for="serveroutput">My Store</label>
+			<textarea class="form-control" id="serveroutput" rows="10" placeholder="Please submit an input above."  readonly></textarea>
+		</div>
+        </form>   
+</div>
     
-<!--Footer-->
+    <script>
+		$("#artist").click(function(e) 
+        {
+			e.preventDefault();
+			
+			data = {userinput: $("#artistinput").val()}
+			$.post("/artist", data, function(resbody){
+				$("#serveroutput").text(resbody);
+			});
+		});
+        
+        $("#song").click(function(e) 
+        {
+			e.preventDefault();
+			
+			data = {userinput: $("#songinput").val()}
+			$.post("/song", data, function(resbody){
+				$("#serveroutput").text(resbody);
+			});
+		});
+	</script>
+    
+    <!--Footer-->
 <hr style="height: 8px; background-color: #1a05ba; width: 100%" />
 
   </body>
