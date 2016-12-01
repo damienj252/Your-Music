@@ -3,6 +3,8 @@ import sqlite3
 #Author: Damien Joyce
 #Date: 30/11/16
 #Original source: https://github.com/data-representation/example-sqlite/blob/master/setup.py
+#Tutorials/information gathered from: https://docs.python.org/2/library/sqlite3.html
+
 
 DATABASE = 'data/music.db'
 

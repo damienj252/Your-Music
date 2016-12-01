@@ -17,6 +17,11 @@ I made many different attempts to create the desired webpage. My first attempt w
 ###References
 I have used the Jquery, Thetehr, bootstrap and  ajax.googleleap to edit the appearance of the webpage application. I have used SQlite as a database to store the data entered into the database called music.db stored in the data folder. I used the html and javascript code that I have learned in previous modules while attending GMIT Galway.
 
+
+###What would I change about my project
+I would have tried to keep it simple from the beginning by using just a single webpage application instead of a multiple webpage application which gave me much difficulty in trying to get working. If I could access the data base I would have the search bar working also but I did not organise my time correctly and eventually ran out of time trying to rectify these errors.
+
+
 ###How to run the application.
 After flask is install the user must go to the desired folder where the project is stored using terminal or CMDR. To run the application the user must have python 3.5.2 (Latest verson of anaconda 4.2.0) installed on their device. Then they must run these commands:
 ```bash

@@ -1,6 +1,7 @@
 #Author: Damien Joyce
 #Date: 30/11/16
 #Original source: https://github.com/data-representation/example-project
+#Tutorials/information gathered from: https://docs.python.org/2/library/sqlite3.html
 
 
 import flask as fl
