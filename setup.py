@@ -1,7 +1,10 @@
 import sqlite3
 
-DATABASE = 'data/music.db'
+#Author: Damien Joyce
+#Date: 30/11/16
+#Original source: https://github.com/data-representation/example-sqlite/blob/master/setup.py
 
+DATABASE = 'data/music.db'
 
 conn = sqlite3.connect('data/music.db')
 
@@ -10,17 +13,17 @@ def setup_db():
     db = sqlite3.connect(DATABASE)
     cur = db.cursor()
 
-    # Create the table if it doesn't exist.
+    # Creates the table if it doesn't exist.
     cur.execute("CREATE TABLE IF NOT EXISTS musicTable(artist TEXT , song TEXT)")
     db.commit()
 
-    # Insert some dummy data if the table is empty.
+    # Inserts some data if no data is present
     cur.execute("SELECT COUNT(*) FROM musicTable")
     if cur.fetchall()[0][0] == 0:
         cur.execute('INSERT INTO musicTable(artist, song) VALUES("Eminem", "Monsters")')
-        cur.execute('INSERT INTO musicTable(artist, song) VALUES("Lost Frequencies", "Are you with me")')
+        cur.execute('INSERT INTO musicTable(artist, song) VALUES("Mack", "Neva")')
 
     db.commit()
 
 if __name__ == "__main__":
-  setup_db()
+    setup_db()

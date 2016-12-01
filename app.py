@@ -1,6 +1,9 @@
 import flask as fl
 
 
+#Author: Damien Joyce
+#Date: 30/11/16
+#Original source: https://github.com/data-representation/example-project
 app = fl.Flask(__name__)
 
 @app.route("/")

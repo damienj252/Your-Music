@@ -26,8 +26,6 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">Music Store</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a href="static/myStore.html">My Store</a></li>
         <!--This is a search bar in the navigation bar-->
         <form class="navbar-form navbar-left">
       <div class="form-group">
@@ -35,7 +33,6 @@
       </div>
       <button type="submit" class="btn btn-default">Search</button>
     </form>
-    </ul>
   </div>
     
 </nav>
@@ -83,7 +80,7 @@
 				$("#artistoutput").text(resbody);
 			});
             
-            song = {songinput: $("#song").val()}
+      song = {songinput: $("#song").val()}
 			$.post("/song", song, function(resbody){
 				$("#songoutput").text(resbody);
 			});

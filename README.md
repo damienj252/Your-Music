@@ -12,6 +12,6 @@ My Project outline are as follows:
 >You are required to develop a single-page web application(SPA) written in the programming language Python using the Flask framework. You must devise an idea for a web application, write the software, write documentation explaining how the application works, and write a short user guide for it.
 
 ###Attempts
-I made many different attempts to create the desired webpage but by the due date I could not rectify the errors. 
+I made many different attempts to create the desired webpage. My first attempt was to create a webpage that could access two other webpages I created.The main page was to give information to the user of how this webpage worked. The second webpage should have allowed the user add their favorite artists and songs and output them to the third webpage while saving them on a database. The third page was suppose to output all the information added in by the user but after accessing the other two pages the browser was unable to find the page. I then decided to stop and start again by creating a single webpage that gave the user the same access as the three combined.
 
-###How to run the application
+
