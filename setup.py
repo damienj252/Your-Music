@@ -1,10 +1,9 @@
-import sqlite3
-
 #Author: Damien Joyce
-#Date: 30/11/16
+#Date: 1/12/16
 #Original source: https://github.com/data-representation/example-sqlite/blob/master/setup.py
 #Tutorials/information gathered from: https://docs.python.org/2/library/sqlite3.html
 
+import sqlite3
 
 DATABASE = 'data/music.db'
 
@@ -25,7 +24,9 @@ def setup_db():
         cur.execute('INSERT INTO musicTable(artist, song) VALUES("Eminem", "Monsters")')
         cur.execute('INSERT INTO musicTable(artist, song) VALUES("Mack", "Neva")')
 
-    db.commit()
+    conn.commit()
+    
+    conn.close()
 
 if __name__ == "__main__":
     setup_db()
