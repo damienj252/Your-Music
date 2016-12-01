@@ -15,3 +15,9 @@ My Project outline are as follows:
 I made many different attempts to create the desired webpage. My first attempt was to create a webpage that could access two other webpages I created.The main page was to give information to the user of how this webpage worked. The second webpage should have allowed the user add their favorite artists and songs and output them to the third webpage while saving them on a database. The third page was suppose to output all the information added in by the user but after accessing the other two pages the browser was unable to find the page. I then decided to stop and start again by creating a single webpage that gave the user the same access as the three combined.
 
 
+###How to run the application.
+First the user must go to the desired folder where the project is stored using terminal or CMDR. To run the application the user must have python 3.5.2 (Latest verson of anaconda 4.2.0) installed on their device. Then they must run these commands:
+python setup.py
+python app.py
+
+Using the URL provided by the terminal input it into a browser and the webpage will appear.
