@@ -20,14 +20,14 @@ I have used the Jquery, Thetehr, bootstrap and  ajax.googleleap to edit the appe
 
 
 ###What would I change about my project
-I would have tried to keep it simple from the beginning by using just a single webpage application instead of a multiple webpage application which gave me much difficulty in trying to get working. If I could have accessed the database I would have the search bar working also but I did not organise my time correctly and eventually ran out of time trying to rectify these errors.
+I would have tried to keep it simple from the beginning by using just a single webpage application instead of a multiple webpage application which gave me much difficulty in trying to get working. If I could have accessed the database I would have the search bar working also but I did not organise my time correctly and eventually ran out of time trying to rectify these errors. I would also have the information of all the data entered to output to the index.html file if I had organised my time better.
 
 
 ###How to run the application.
 After flask is install the user must go to the desired folder where the project is stored using terminal or CMDR. To run the application the user must have python 3.5.2 (Latest verson of anaconda 4.2.0) installed on their device. Then they must run these commands:
 ```bash
 $ python setup.py
-$ python webapp.py
+$ python app.py
 ```
 
 Using the URL provided by the terminal input it into a browser and the webpage will appear.
